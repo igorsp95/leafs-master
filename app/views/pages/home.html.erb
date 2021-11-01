@@ -1,0 +1,74 @@
+<!-- header set turbolinks in order to reload -->
+<% content_for :head do %>
+  <meta name="turbolinks-visit-control" content="reload">
+<% end %>
+ 
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="3000" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_637583458_347721.jpg);">
+      <div class="d-flex h-100 align-items-center justify-content-center">
+        <div class="banner">
+          <div style="text-align: center;">
+            <!-- loader -->
+            <div class="outer"></div>
+            <div class="inner">
+              <span>0%</span>
+            </div>
+            <!-- Text counter up banner -->
+            <div class="container">
+              <span  id='counter-rec' style="display: none;">0</span>
+              <h1><span data-total='<%=@total %>' id="number-change" >0</span> kg</h1>
+              <p>De material reciclado através do LEAFS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- HOME PAGE - Informações contidas após o Banner -->
+<div class='information'>
+  <h2>Como o leafs trabalha para mudar o destino do seu lixo:</h2>
+  <div class='info-space'>
+    <br>
+    <div class="info px-3 text-center">
+      <%= image_tag "trash.png", class: "img-info" %>
+      <p> Todo o material de descarte que se enquadre como papeis, metais, vidros ou plásticos, e que estejam sujeitos à reciclagem, deverão ser encaminhados aos Centros de Coleta do LEAFS mais próximo de você. Para tanto, o Usuário LEAFS deverá, após se cadastrar, realizar uma "Solicitação LEAFS" e informar a quantidade de cada material que pretende reciclar. A requisição somente será aceita após o recebimento do material de descarte pelo Centro de Triagem.</p>
+    </div>
+    <div class="info px-3  text-center">
+      <%= image_tag "recycle.png", class: "img-info" %>
+      <p> Após a abertura da "Solicitação LEAFS" pelo usuário, este deverá encaminhar o material de descarte ao Centro de Triagem de sua preferência, o qual foi informado no formulário da requisição. Os Centros de Triagem do LEAFS possuem equipamentos próprios, capazes de conferir os materiais e as quantidades informadas por cada usuário, sendo possível o ajuste de quantidade e material em caso de divergência. </p>
+      <br>
+    </div>
+    <div class="info px-3  text-center">
+      <%= image_tag "company.png", class: "img-info" %>
+      <p> Após a aprovação da requisição do usuário, será imediatamente creditado em sua conta LEAFS o valor correspondente à reciclagem realizada, ficando o saldo LEAFS disponível para utilização. Assim, com os LEAFS em conta, o usuário poderá usufruir dos diversos descontos exclusivos fornecidos pelas empresas parceiras do LEAFS! Venha fazer parte do LEAFS você também!</p>
+      <br>
+      <br>
+    </div>
+ 
+    </div>
+  </div>
+ 
+  <div class="container justify-content-center mb-5" >
+ 
+    <div class="">
+      <h5 class="map-title" style="font-size: 22px; font-family: 'Roboto Slab', serif; text-decoration: none">Encontre o ponto de coleta mais próximo de você:</h5>
+      <div id="geocoder"  class="geo-div">
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="col-12 mt-3">
+        <div
+        id="map"
+        style="width: 100%; height: 550px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

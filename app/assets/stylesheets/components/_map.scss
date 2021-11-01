@@ -1,0 +1,42 @@
+// .mapboxgl-popup {
+//   max-width: 200px;
+
+// }
+
+// .mapboxgl-popup-content {
+//   text-align: center;
+//   font-family: 'Open Sans', sans-serif;
+
+// }
+
+/*------------------------search map ------------------*/
+
+.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+
+  min-width: 50%;
+  svg{
+    display: none;
+  }
+}
+
+.geo-div {
+  position:relative;
+  left: 27%;
+  top: 11vh;
+  width: 72%;
+  
+}
+
+.map-title{
+  position:relative;
+  text-align:center;
+  top: 40px;
+}
+
+.search-div{
+  position:relative;
+  left: 80%;
+  top: 50px;
+
+  width: 80%
+}

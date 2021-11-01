@@ -1,0 +1,60 @@
+.button-green {
+  color: white;
+  padding: 6px 24px 8px 24px;
+  background: #7CBF17;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  border: none;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.button-green:hover {
+  background:  #71ad15;
+  color: white;
+  text-decoration: none;
+}
+
+.button-orange {
+  color: white;
+  padding: 6px 24px 8px 24px;
+  background: #F2762E;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.button-orange:hover {
+  background:  #df6c2a;
+  color: white;
+  text-decoration: none;
+}
+
+.button-red {
+  color: white;
+  padding: 6px 24px 8px 24px;
+  background: #F24B4B;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.button-red:hover {
+  background:  #d64242;
+  color: white;
+  text-decoration: none;
+}
+
+.button-transparent {
+  color: #505050;
+  border: 1px solid #505050;
+  padding: 6px 24px 8px 24px;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.button-transparent:hover {
+  background:  #e6e6e6;
+  color: #1b1b1b;
+  text-decoration: none;
+}
